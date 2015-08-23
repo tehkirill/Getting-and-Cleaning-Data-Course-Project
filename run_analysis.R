@@ -1,4 +1,4 @@
-##1. Merges the training and the test sets to create one data set.
+#1. Merges the training and the test sets to create one data set.
 x_train <-        read.table("train/X_train.txt")
 y_train <-        read.table("train/y_train.txt")
 subject_train <-  read.table("train/subject_train.txt")
@@ -11,7 +11,7 @@ test <-   cbind(subject_test, y_test, x_test)
 
 mega <-   rbind(train, test)
 
-##2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+#2. Extracts only the measurements on the mean and standard deviation for each measurement. 
 features <- read.table("features.txt")
 meanstdfeatures <- grep("-(mean|std)\\(\\)", features[, 2])
 megaMS <- mega[, c(1, 2, meanstdfeatures+2)]
@@ -20,7 +20,7 @@ megaMS <- mega[, c(1, 2, meanstdfeatures+2)]
 activity_labels <- read.table("activity_labels.txt")
 megaMS[,2] <- activity_labels[megaMS[,2], 2]
 
-##4. Appropriately labels the data set with descriptive variable names. 
+#4. Appropriately labels the data set with descriptive variable names. 
 namesf <- as.vector(features[meanstdfeatures, 2])
 names(megaMS) <- c("subject", "activity", namesf)
 
