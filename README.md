@@ -7,4 +7,4 @@ I was simply following the steps laid out by the project instructions, which sai
 4. Appropriately labels the data set with descriptive variable names. 
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-Most of the steps took less than 3 lines so by simply reading through the script step by step one can easily understand how it works.
+Most of the steps took less than 3 lines so by simply reading through the script step by step (especially with codebook explaining the variables) one can easily understand how it works.
